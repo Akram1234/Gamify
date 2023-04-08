@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Wikipedia Text Extractor",
+    "version": "1.0",
+    "description": "Extracts text from Wikipedia articles.",
+    "permissions": ["activeTab", "http://*/*", "https://*/*"],
+    "content_scripts": [{
+      "matches": ["https://en.wikipedia.org/wiki/*"],
+      "js": ["content.js"]
+    }],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        "d3.js"
+      ]
+}
+  
